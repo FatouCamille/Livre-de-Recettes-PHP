@@ -14,11 +14,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $ingredients = $_POST['ingredients'] ?? '';
     $image_path = null;
 
-    
     if (!empty($_FILES['image']['name'])) {
         $uploadDir = 'uploads/';
         if (!is_dir($uploadDir)) {
-            mkdir($uploadDir, 0777, true); // Crée le dossier s'il n'existe pas
+            mkdir($uploadDir, 0777, true); 
         }
 
         $filename = uniqid() . '_' . basename($_FILES['image']['name']);
@@ -29,7 +28,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         }
     }
 
-    // Préparer l'insertion
     $stmt = $pdo->prepare("INSERT INTO recette (nom, type, description, ingredients, image_path) VALUES (?, ?, ?, ?, ?)");
     $stmt->execute([$nom, $type, $description, $ingredients, $image_path]);
 
