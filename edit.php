@@ -7,7 +7,6 @@ if (!isset($_SESSION['admin_id'])) {
 
 require 'db.php';
 
-// On récupère la recette à modifier
 if (isset($_GET['id'])) {
     $stmt = $pdo->prepare("SELECT * FROM recette WHERE id = ?");
     $stmt->execute([$_GET['id']]);
@@ -45,7 +44,6 @@ if (!$recette) {
             text-align: center;
         }
 
-        /* --- LE FORMULAIRE GLAMOUR --- */
         .form-container {
             background: white;
             padding: 40px;
@@ -77,7 +75,7 @@ if (!$recette) {
             border-radius: 12px;
             background: #fffcfd;
             font-family: inherit;
-            box-sizing: border-box; /* Important pour que ça ne dépasse pas */
+            box-sizing: border-box; 
             outline: none;
             transition: 0.3s;
         }
@@ -92,7 +90,6 @@ if (!$recette) {
             resize: vertical;
         }
 
-        /* --- BOUTON ENREGISTRER --- */
         .btn-save {
             width: 100%;
             background: linear-gradient(45deg, #ec407a, #f48fb1);
