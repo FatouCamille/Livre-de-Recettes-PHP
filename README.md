@@ -11,4 +11,4 @@ L'idée était de créer une interface "Admin" où l'on peut ajouter, modifier o
 * **CSS moderne** : Utilisation de **Flexbox** et **Grid** pour que l'affichage des recettes soit propre et s'adapte à tous les écrans.
 
 ### **🌟 Ce que j'ai appris**
-Ce projet m'a permis de solidifier mes bases en Backend et de mieux comprendre la logique des données, le tout en m'amusant étant passionnée de cuisine !"
+Ce projet m'a permis de solidifier mes bases en Backend et de mieux comprendre la logique des données, le tout en m'amusant étant passionnée de cuisine !
